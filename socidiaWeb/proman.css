@@ -1,0 +1,19 @@
+.downloadBtn{
+    background-color: blueviolet;
+    border-radius: 0.3rem;
+    font-size: 1.5rem;
+    width: auto;
+    padding: 1rem;
+    height: auto;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+h1,h2,h3{
+    text-align: center;
+}
+.fullSize{
+    width: 50%;
+    margin:auto;
+    text-align: center;
+}

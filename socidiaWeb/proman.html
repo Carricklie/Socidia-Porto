@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Proman</title>
+    <link rel="icon" href="/media/Socidia Logo Only.png" type="image/icon type">
+    <link rel="stylesheet" href="/reset.css"/>
+    <link rel="stylesheet" href="/proman.css"/>
+</head>
+<body>
+    <a hidden id="download" style="display: none" 
+    href="/media/PromanV1.4.apk"
+    download></a>
+    <h1>Proman - Alpikasi Project Management</h1>
+    <h2>Klik Tombol untuk Mengunduh</h2>
+    <h3>Versi 1.4</h3>
+    <h3>13.5 MB</h3>
+    <h3>Perubahan : <br> - Letak Tombol Refresh <br> - Masalah Tombol back <br> - Zoom In Zoom Out</h3>
+    <div class="fullSize">
+        <button class="downloadBtn" onclick="download()">Download</button>
+    </div>
+    
+    <script>
+        function download() {
+            document.getElementById('download').click();
+        }
+    </script>
+</body>
+</html>

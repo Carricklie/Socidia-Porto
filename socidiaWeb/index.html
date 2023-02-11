@@ -3,9 +3,219 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="/media/Socidia Logo Only.png" type="image/icon type">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="/reset.css"/>
+    <link rel="stylesheet" href="/socidia.css"/>
     <title>Socidia</title>
+    <script>
+      function goToLinkedIn(){
+        window.open(
+            "https://www.linkedin.com/in/carrick-1a1206210/", "_blank");
+      }
+      function goToYoutube(){
+        window.open(
+            "https://www.youtube.com/@socidia", "_blank");
+      }
+      function goToInstagram(){
+        window.open(
+            "https://www.instagram.com/lcarrickl/", "_blank");
+      }
+      function goToWhatsApp(){
+        window.open(
+            "https://wa.me/+60172365921", "_blank");
+      }
+      function goToSpotify(){
+        window.open(
+          "https://open.spotify.com/artist/4q7kk4fHBlx0lwhRgN8OHI?si=8-gRsjIdQZamwRsGnZ44QQ", "_blank");
+      }
+      function downloadCV(){
+        window.open(
+            "/media/Carrick's CV or Resume.pdf", "_blank");
+      }
+      function activate(which){
+        var theDOM = document.getElementById(which);
+        var theDOMBtn = document.getElementById(which+"Btn");
+        var doms = document.getElementsByClassName("theParts");
+        var domsBtns = document.getElementsByClassName("parts");
+        for (const dom of doms) {
+          if(dom==theDOM){
+            theDOM.hidden=false;
+          }else{
+            dom.hidden=true;
+          }
+        }
+        for (const domBtn of domsBtns) {
+          if(domBtn==theDOMBtn){
+            theDOMBtn.disabled=true;
+            theDOMBtn.style.backgroundColor="black";
+            theDOMBtn.style.color="white";
+          }else{
+            domBtn.disabled=false;
+            domBtn.style.backgroundColor="white";
+            domBtn.style.color="black";
+          }
+        }
+      }
+    </script>
+    <style>
+      .clickable{
+        cursor: pointer;
+      }
+    </style>
   </head>
-  <body style="background-color: azure;">
-      <h1 style="color: magenta">Carrick Portofolio</h1>
+
+  <body style="background-color:white">
+    <header>
+        <div class="banner">
+          <img src="/media/Socidia Transparent.png" alt="socidiaBanner" class="imgBanner">
+          <ul class="socidiaGroup">
+            <img src="/media/linkedInpng.png" alt="linkedIn" class="clickable" onclick="goToLinkedIn()">
+            <img src="/media/youtubepng.png" alt="youtube" class="clickable" style="border-radius: 1rem;" onclick="goToYoutube()">
+            <img src="/media/instagrampng.png" alt="linkedIn" class="clickable" onclick="goToInstagram()">
+            <img src="/media/Spotifypng.png" alt="linkedIn" class="clickable" style="border-radius: 1rem;" onclick="goToSpotify()">
+          </ul>
+          <br><br><br>
+          
+        </div>
+        <div class="profilePicContainer">
+          <div id="profilePic"></div><br>
+          <h1 class="name">Carrick</h1>
+          
+      <style>
+        .libutton {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          padding: 0.5rem;
+          text-align: center;
+          outline: none;
+          text-decoration: none !important;
+          color: #ffffff !important;
+          width: 100%;
+          height: fit-content;
+          border-radius: 1rem;
+          background-color: #0A66C2;
+          font-family: "SF Pro Text", Helvetica, sans-serif;
+        }
+      </style>
+      <br>
+          <a class="libutton" href="https://www.linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=carrick-1a1206210" target="_blank">
+            Follow on LinkedIn</a>
+        </div>
+    </header>
+    <ul class="autosizeshow">
+      <li class="details">
+          <table>
+            <tr>
+              <td>Phone Number (Malaysia)</td>
+              <td>&nbsp;:&nbsp;</td>
+              <td>+60 172365921<br><button class="buttonWhatsApp" onclick="goToWhatsApp()">WhatsApp Available <img class="logoWhatsapp" alt="WhatsApp" src="/media/whatsapp.png"></button></td>
+            </tr>
+            <tr>
+              <td>Phone Number (Indonesia)</td>
+              <td>&nbsp;:&nbsp;</td>
+              <td>+62 85157002978</td>
+            </tr>
+            <tr>
+              <td>Email</td>
+              <td>&nbsp;:&nbsp;</td>
+              <td><a href="mailto:lie.carrick1234@gmail.com">lie.carrick1234@gmail.com</a></td>
+            </tr>
+            <tr>
+              <td>Hobby</td>
+              <td>&nbsp;:&nbsp;</td>
+              <td>Chess</td>
+            </tr>
+          </table>
+      </li>
+      <li class="additional">
+        <ul>
+          <li><button class="parts" id="aboutMeBtn" style="background-color: black; color:white;" onclick="activate('aboutMe')" disabled>About Me</button></li>
+          <li><button class="parts" id="educationBtn" onclick="activate('education')">Education</button></li>
+          <li><button class="parts" id="projectBtn" onclick="activate('projects')">Projects</button></li>
+          <li><button class="download" onclick="downloadCV()" download>Download My <br>CV / Resume</button></li>
+        </ul>
+      </li>
+      <li class="theParts" id="aboutMe">
+          <h1>About Me</h1>
+          <p class="aboutMeContent">
+            Hello, my name is Carrick from Indonesia. <br>
+            [Socidia] is my online profile / stage name which stands for "Social Media"<br><br>
+            Currently, I'm a Final Year International Student at <a href="https://help.edu.my">HELP University</a>
+            majoring in IT ( Information Technology ).<br>
+            I'm proficient in :<br>
+            - English ( <a href="https://www.ielts.org">IELTS</a> = 6.0 )<br>
+            - Indonesian ( native )<br>
+            - Hokkien ( Chinese Dialect )<br><br>
+            I'm majorly interested in : <br>
+            <br>
+            - <strong>Cryptocurrency</strong><br>
+            I'm very interested in Cryptocurrency because I have joined several Cryptocurrency project and actually very interested on how these things work.<br>
+            Most Project I involved is in the <a href="https://academy.binance.com/en/articles/an-introduction-to-binance-smart-chain-bsc">[BSC( Binance Smart Chain)]</a> network and because of this I am interested to fix some problem in cryptocurrency world whereas 
+            <a href="https://academy.binance.com/en/glossary/proof-of-stake">[Proof Of Stake]</a> problem where it's not fully centralized. That's why in my Final Year Project on <a href="https://help.edu.my">HELP University</a>, 
+            I'm developing a new system from the existing <a href="https://academy.binance.com/en/glossary/proof-of-stake">[Proof Of Stake]</a> to become less centralized.<br>
+            <br>
+            - <strong>Game Development</strong><br>
+            My Dream since i was child is to make a Game that is as big as [PUBG]. Where because of that I'm learning the <a href="https://unity.com">[Unity Game Engine]</a> and how it works.<br>
+            Unity using <a href="https://www.w3schools.com/cs/index.php">[C#]</a> as the programming language, where is pretty similar to <a href="https://www.oracle.com/my/java/">[Java]</a> where is my most comfortable programming language.  
+            <br><br>
+            TECHNICAL SKILLS :
+            <br><br>1. <a href="https://www.oracle.com/my/java/">[Java]</a><br>
+            Java is the most comfortable programming language because i do a lot of projects using Java language as in 
+            <a href="https://developer.android.com/studio">[Android Studio]</a>, like <a href="proman.html">[Proman]</a>.
+            <br><br>2. <a href="https://www.w3schools.com/cs/index.php">[C#]</a> <br>
+            Where as mention before it is similar to Java and i use it for Game Programming using <a href="https://unity.com">[Unity Game Engine]</a>.
+            <br><br>3. <a href="https://www.w3schools.com/cpp/cpp_intro.asp">[C/C++]</a><br>
+            I also very comfortable at C/C++ where it is my first programming language to learn the programming concept and principles in 
+            <a href="https://binus.ac.id">[BINUS]</a> Programming Bootcamp.
+            <br><br>4. <a href="https://www.javascript.com">[JavaScript]</a><br>
+            I comfortable using JavaScript because for my Final Year Project in <a href="https://help.edu.my">HELP University</a>, i use JavaScript to make the Blockchain and the system and done a lot of research about
+            <a href="https://nodejs.org/en/">[NodeJS]</a>, other than that i can use it for <a href="https://angular.io">[Angular]</a>, <a href="https://www.mongodb.com/cloud/atlas">[Mongo DB]</a>, <a href="https://expressjs.com">[Express]</a>, and for Websites for DOM.
+            <br><br>5. <a href="https://dart.dev">[Dart]</a><br>
+            At the early stages of programming im very interested to make my own mobile application, where after years of study i come out with 
+            <a href="https://flutter.dev">[Flutter]</a> where using Dart as their programming language where I'm in love with Flutter as go to application making Engine.
+            <br><br>6. Others<br>
+            These are some of languages that i learn but didn't use as much : 
+            <br>- <a href="https://www.python.org">[Python]</a> as my first programming course in HELP University
+            <br>- <a href="https://www.php.net">[PHP]</a> was my go to backend programming language but after discovering <a href="https://firebase.google.com">[Firebase]</a> i didn't use as much.
+            <br>- [<a href="https://www.w3schools.com/html/">HTML</a> + <a href="https://www.w3schools.com/css/">CSS</a>] as my go to for making websites, for example this website!!
+            <br>- [<a href="https://www.r-project.org">R</a> & <a href="https://posit.co/download/rstudio-desktop/">R Studio</a>] for data visualization
+            <br>- <a href="https://www.w3schools.com/sql/sql_intro.asp#:~:text=SQL%20stands%20for%20Structured%20Query,for%20Standardization%20(ISO)%20in%201987">[SQL]</a> for SQL databases
+            <br><br>
+            EXTRACURRICULAR
+            <br><br>
+            Because myself interested to a lot of stuff outside the formal education, i also get some skills like :
+            <br><br>- <a href="https://www.image-line.com">[FL Studio]</a><br>
+            Because I'm into music, music composing using FL studio and mixing sounds using <a href="https://vb-audio.com/Voicemeeter/">[Voicemeeter]</a> is daily driver for me.
+            <br><br>- Stage performing<br>
+            In music I'm also discovering about beatbox where stage performing in beatbox is common, where also I likes to improvises at all times makes me confident to perform on stage.
+            <br><br>- Video Editing and Streaming<br>
+            Sometimes i also likes to makes video and Streaming in <a href="https://www.youtube.com">[Youtube]</a>, forced me to have video editing skills.
+            <br><br>
+          </li>
+      <li class="theParts" id="education" hidden>
+        <h1>Education & Courses</h1>
+          <ul>
+            <li>
+              <h2><br>Bachelor of IT, HELP University, Shah Alam, Malaysia</h2>
+              <h3>August 2020 - July 2023</h3>
+              <p>
+                Current Year : Final Year 2nd Semester of 3
+              </p>
+            </li>
+            <li>
+              <h2><br><br>Programming Bootcamp, BINUS, Jakarta, Indonesia</h2>
+              <h3>June 2020 - August 2020</h3>
+            </li>
+            <li>
+              <h2><br><br>Science Highschool, SMA Methodist-3, Medan, Indonesia</h2>
+              <h3>May 2017 - April 2020</h3>
+            </li>
+          </ul>
+          
+      </li>
+     
+    </ul>
   </body>
 </html>
